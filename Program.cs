@@ -10,7 +10,7 @@ namespace RockPaperScissors
       while (play)
       {
         //As a user, I should see a welcome message.
-        Console.WriteLine("Welcome to Rock, Paper Scissors!");
+        Console.WriteLine("Welcome to Rock, Paper, Scissors!");
         //As a user, I should see the options I can pick (i.e., "rock", "paper", "scissor")
         Console.WriteLine("How tough do you want it?");
         Console.WriteLine("easy, normal or impossible?");
@@ -23,12 +23,12 @@ namespace RockPaperScissors
         if (difficulty == "normal")
         {
           Console.WriteLine("Choose Wisely");
-          Console.WriteLine("rock, paper or scissors?");
+          Console.WriteLine("rock, paper, scissors,?");
           var tool = Console.ReadLine().ToLower();
           if (tool != "rock" && tool != "paper" && tool != "scissors")
           {
             Console.WriteLine("Invalid Selection. Please pick rock, paper or scissors");
-            Console.ReadLine();
+            tool = Console.ReadLine();
           }
           //The computer should randomly decide one of the options
           Random rnd = new Random();
