@@ -14,6 +14,6 @@ Adventure Mode
 
 [x] Create a way for the user to choose a level of difficulty, normal, impossible, or easy.
 [x] normal should run the game as in explorer mode above
-[] impossible mode always chooses the winning option (if the user picked paper, the computer always select scissor)
+[x] impossible mode always chooses the winning option (if the user picked paper, the computer always select scissor)
 [x] easy mode always chooses the losing option (if the user picked paper, then the computer always select rock)
 [x] Allow the user to play again. hint: while loops

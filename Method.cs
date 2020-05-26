@@ -23,6 +23,7 @@ namespace RockPaperScissors
           EasyDifficulty();
           break;
         case "impossible":
+          ImpossibleDifficulty();
           break;
         default:
           NormalDifficulty();
@@ -76,12 +77,37 @@ namespace RockPaperScissors
         case "lizard":
           result = ComputerRandomSelection("spock", "paper");
           break;
-        case "spock":
+        default:
           result = ComputerRandomSelection("rock", "scissors");
           break;
       }
       Console.WriteLine($"Your opponent chose {result}");
       Console.WriteLine("You win!");
+    }
+    public void ImpossibleDifficulty()
+    {
+      var tool = PlayerToolSelection();
+      var result = "";
+      switch (tool)
+      {
+        case "rock":
+          result = ComputerRandomSelection("spock", "paper");
+          break;
+        case "paper":
+          result = ComputerRandomSelection("scissors", "lizard");
+          break;
+        case "scissors":
+          result = ComputerRandomSelection("spock", "rock");
+          break;
+        case "lizard":
+          result = ComputerRandomSelection("rock", "scissors");
+          break;
+        default:
+          result = ComputerRandomSelection("lizard", "paper");
+          break;
+      }
+      Console.WriteLine($"Your opponent chose {result}");
+      Console.WriteLine("You lose!");
     }
     public string ComputerRandomSelection(string opponent1, string opponent2)
     {
@@ -101,6 +127,17 @@ namespace RockPaperScissors
         tool = Console.ReadLine();
       }
       return tool;
+    }
+    public bool PlayAgain()
+    {
+      Console.WriteLine("Play again? ('yes' or 'no')");
+      var playAgain = Console.ReadLine().ToLower();
+      while (playAgain != "yes" && playAgain != "no")
+      {
+        Console.WriteLine("I don't get it. Yes or no?");
+        playAgain = Console.ReadLine().ToLower();
+      }
+      return playAgain == "no" ? false : true;
     }
   }
 }
