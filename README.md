@@ -1,25 +1,19 @@
-# Default Template for SDG .NET Course
+How to get started
+Get familiar with rock, paper, scissors if you haven't played before (or in a while)
+Write out in English, ALL the steps the application needs to take
+Explorer Mode
 
-This is the default template for a simple .NET Core console app. This template has:
+[x] As a user, I should see a welcome message.
+[] As a user, I should see the options I can pick (i.e., "rock", "paper", "scissor")
+[] The computer should randomly decide one of the options.
+[] You program should then decide who the winner is;
+[] The user should then see the randomly selected option, as well as a win or lose message.
+add some validation around user input.
 
-- github integration
+Adventure Mode
 
-## To push to github
-
-To create and push your current code to github, use the task `create-github`.
-
-How?
-
-1. Open your command pallette by using (Mac) `shift + cmd + p` or (Windows) `shift + ctrl + p`
-2. Search and Select `Tasks: Run Task`
-3. Select `create-github` from the dropdown
-
-This will create a new github repo, locally and up on github and also push your current code.
-
-## To turn in your assignment:
-
-after you have created a github repo, completed your project and pushed your code, follow these instructions: https://suncoast.io/handbook/tools/assignment-turn-in/
-
-## PROTIP:
-
-When you are complete with the project and have turned it in to your instructor, update this read me with details about the assignment.
+[] Create a way for the user to choose a level of difficulty, normal, impossible, or easy.
+[] normal should run the game as in explorer mode above
+[] impossible mode always chooses the winning option (if the user picked paper, the computer always select scissor)
+[] easy mode always chooses the losing option (if the user picked paper, then the computer always select rock)
+[x] Allow the user to play again. hint: while loops
